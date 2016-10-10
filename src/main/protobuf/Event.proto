@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package example;
+
+import "scalapb/scalapb.proto";
+
+message Event {
+    required string eventId = 1 [(scalapb.field).type = "example.EventId"];
+}
+
+message Deposit {
+    required int32 amount = 1 [(scalapb.field).type = "example.PosMoneyAmount"];
+}
